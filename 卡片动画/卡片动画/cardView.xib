@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="cardView">
+            <rect key="frame" x="0.0" y="0.0" width="337" height="481"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EiS-3T-TB1">
+                    <rect key="frame" x="34" y="421" width="269" height="40"/>
+                    <color key="backgroundColor" red="0.20000000000000001" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="ZG0-wb-SG7"/>
+                    </constraints>
+                    <state key="normal" title="tap">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="tapClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="Ho9-M6-3yH"/>
+                    </connections>
+                </button>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bQs-hU-f5N">
+                    <rect key="frame" x="0.0" y="0.0" width="337" height="481"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="bQs-hU-f5N" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="72n-U8-FZs"/>
+                <constraint firstAttribute="bottom" secondItem="EiS-3T-TB1" secondAttribute="bottom" constant="20" id="7ce-nP-A3O"/>
+                <constraint firstAttribute="bottom" secondItem="bQs-hU-f5N" secondAttribute="bottom" id="Ioc-Eo-IJo"/>
+                <constraint firstItem="EiS-3T-TB1" firstAttribute="top" secondItem="bQs-hU-f5N" secondAttribute="bottom" id="JQM-Ek-4bl"/>
+                <constraint firstItem="bQs-hU-f5N" firstAttribute="width" secondItem="EiS-3T-TB1" secondAttribute="width" multiplier="1:0.8" id="O1y-01-QbF"/>
+                <constraint firstAttribute="trailing" secondItem="bQs-hU-f5N" secondAttribute="trailing" id="pM5-rl-SEw"/>
+                <constraint firstItem="bQs-hU-f5N" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="q4l-Zj-Yl6"/>
+                <constraint firstAttribute="centerX" secondItem="EiS-3T-TB1" secondAttribute="centerX" id="tzJ-6C-wlN"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                    <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="15"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="color" keyPath="tapColor1">
+                    <color key="value" red="0.20000000000000001" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="color" keyPath="tapColor2">
+                    <color key="value" red="0.20000000000000001" green="1" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="size" keyPath="circleSize">
+                    <size key="value" width="160" height="160"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="size" keyPath="shadowSize">
+                    <size key="value" width="10" height="10"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="buttonConnerRadius">
+                    <real key="value" value="20"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="JQM-Ek-4bl"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="tapButton" destination="EiS-3T-TB1" id="OSw-RU-07V"/>
+                <outletCollection property="gestureRecognizers" destination="ceK-jn-Jah" appends="YES" id="6gf-N6-twu"/>
+                <outletCollection property="gestureRecognizers" destination="GuL-wp-QsQ" appends="YES" id="RUY-QK-wQv"/>
+            </connections>
+            <point key="canvasLocation" x="215.5" y="134.5"/>
+        </view>
+        <swipeGestureRecognizer direction="left" id="ceK-jn-Jah"/>
+        <swipeGestureRecognizer direction="right" id="GuL-wp-QsQ"/>
+    </objects>
+</document>

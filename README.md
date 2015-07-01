@@ -5,7 +5,7 @@
 
 使用POP动画引擎制作
 
-我的在简书上的文章是：www.baidu.com
+我的在简书上的文章是：http://www.jianshu.com/p/c31b8d24c1c8
 
 我的微博:Neo_joke
 
